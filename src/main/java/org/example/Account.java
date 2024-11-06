@@ -13,8 +13,8 @@ public class Account {
         if (amount < 0) return;
         this.balance += amount;
     }
-    public void withdraw(double amount){
-        if (amount < balance){
+    public void withdraw(double amount) throws IllegalArgumentException {
+        if (amount < balance) {
             throw new IllegalArgumentException();
         }
         this.balance -= amount;
